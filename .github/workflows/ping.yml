@@ -1,0 +1,13 @@
+name: Ping PythonAnywhere Bot
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  ping_bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Esegui richiesta HTTP
+        run: curl https://alberto3105.pythonanywhere.com/
