@@ -1,0 +1,14 @@
+name: Ping PythonAnywhere Bot
+
+on:
+  schedule:
+    # Esegue il comando ogni ora esatta
+    - cron: '0 * * * *'
+  workflow_dispatch: # Ti permette di premerlo a mano quando vuoi per testarlo
+
+jobs:
+  ping_bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Esegui richiesta HTTP
+        run: curl https://alberto3105.pythonanywhere.com/
